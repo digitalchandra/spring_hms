@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';  // Importing Ionicons
+import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io'; // Importing Ionicons
 
 const Sidebar = () => {
   const [patientsOpen, setPatientsOpen] = useState(false);
   const [medicinesOpen, setMedicinesOpen] = useState(false);
   const [appointmentsOpen, setAppointmentsOpen] = useState(false);
+  const [doctorsOpen, setDoctorsOpen] = useState(false); // State for Doctors section
 
   // Toggle functions
   const togglePatients = () => setPatientsOpen(!patientsOpen);
   const toggleMedicines = () => setMedicinesOpen(!medicinesOpen);
   const toggleAppointments = () => setAppointmentsOpen(!appointmentsOpen);
+  const toggleDoctors = () => setDoctorsOpen(!doctorsOpen); // Toggle function for Doctors
 
   return (
     <div className="bg-blue-800 text-white w-64 p-5">
@@ -24,7 +26,8 @@ const Sidebar = () => {
             className="text-lg font-semibold cursor-pointer flex items-center"
             onClick={togglePatients}
           >
-            <span>Patients</span>
+            <Link to="/viewpatient"> <span>Patients</span> </Link>
+            
             {patientsOpen ? (
               <IoIosArrowDown className="ml-2" />
             ) : (
@@ -65,7 +68,8 @@ const Sidebar = () => {
             className="text-lg font-semibold cursor-pointer flex items-center"
             onClick={toggleAppointments}
           >
-            <span> <Link to="/viewappoinment" className="text-lg hover:text-gray-300">Appointments </Link></span>
+            <Link to="/viewappoinment"> <span>Appointments</span> </Link>
+            
             {appointmentsOpen ? (
               <IoIosArrowDown className="ml-2" />
             ) : (
@@ -77,6 +81,28 @@ const Sidebar = () => {
             <ul className="ml-4">
               <li><Link to="/addappoinment" className="text-lg hover:text-gray-300">Add Appointment</Link></li>
               <li><Link to="/appointments/view" className="text-lg hover:text-gray-300">View Appointment</Link></li>
+            </ul>
+          )}
+        </li>
+        <li className="mb-5">
+          <span
+            className="text-lg font-semibold cursor-pointer flex items-center"
+            onClick={toggleDoctors}
+          >
+            <Link to="/viewdoctors"> <span>Doctors</span></Link>
+            {doctorsOpen ? (
+              <IoIosArrowDown className="ml-2" />
+            ) : (
+              <IoIosArrowForward className="ml-2" />
+            )}
+          </span>
+          {/* Doctors Dropdown */}
+          {doctorsOpen && (
+            <ul className="ml-4">
+
+              <li><Link to="/adddoctor" className="text-lg hover:text-gray-300">Add Doctor</Link></li>
+
+              <li><Link to="/doctors/view" className="text-lg hover:text-gray-300">View Doctors</Link></li>
             </ul>
           )}
         </li>
