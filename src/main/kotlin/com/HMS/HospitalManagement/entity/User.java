@@ -1,26 +1,29 @@
-// Student Name: Shrstha Chandra Bahadur
-// student ID m24w0199
-// ------------------------
-// Student Name: Anju Pandey
-// Student Id: m240213
-
 package com.HMS.HospitalManagement.entity;
 
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "user")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, unique = true)
     private String username;
+
+    @Column(nullable = false)
     private String password;
 
-    // Other fields like roles, etc.
+    // Getters and Setters
+    public Long getId() {
+        return id;
+    }
 
-    // Constructor, getters, and setters
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getUsername() {
         return username;
@@ -37,6 +40,4 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    // Other methods...
 }

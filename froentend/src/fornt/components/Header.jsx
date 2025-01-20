@@ -1,7 +1,7 @@
-// Student Name: Shrstha Chandra Bahadur 
+// Student Name: Shrstha  
 // student ID m24w0199 
 // ------------------------
-// Student Name: Anju Pandey 
+// Student Name: Pandey 
 // Student Id: m240213
 
 import React from "react";
@@ -15,7 +15,7 @@ const Header = () => {
         <div className="text-xl font-bold">Hospital Management System</div>
         <nav>
           <ul className="flex space-x-6">
-            <li><a href="#hero" className="hover:underline">Home</a></li>
+            <li><Link to="/" className="hover:underline">Home</Link></li>
             <li><a href="#features" className="hover:underline">Features</a></li>
             <li><a href="#services" className="hover:underline">Services</a></li>
             <li><a href="#footer" className="hover:underline">Contact</a></li>

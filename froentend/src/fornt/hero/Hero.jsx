@@ -1,3 +1,9 @@
+// Student Name: Shrstha  
+// student ID m24w0199 
+// ------------------------
+// Student Name: Pandey 
+// Student Id: m240213
+
 import React from "react";
 
 const Hero = () => {

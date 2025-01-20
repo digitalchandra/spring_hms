@@ -1,3 +1,10 @@
+// Student Name: Shrstha Chandra Bahadur 
+// student ID m24w0199 
+// ------------------------
+// Student Name: Anju Pandey 
+// Student Id: m240213
+
+
 import React from "react";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
@@ -9,7 +16,7 @@ import AddAppointment from "./dashboard/pages/appoinment/AddAppoinment";
 import UpdatePatient from "./dashboard/pages/patient/UpdatePatient";
 import ViewDoctors from "./dashboard/pages/doctors/ViewDoctors";
 import AddDoctors from "./dashboard/pages/doctors/AddDoctors";
-import AddDoctor from "./dashboard/pages/doctors/AddDoctor";
+
 
 import ViewPatient from "./dashboard/pages/patient/ViewPatient";
 import Homepage from "./fornt/Homepage";
@@ -33,15 +40,15 @@ function App() {
 
       {/* Route for Doctors */}
         <Route path="/viewdoctors" element={<ViewDoctors/>}/>
-        <Route path="/adddoctor" elements ={<AddDoctor/>}/>
-
+    
+        <Route path="/adddoctor" element={<AddDoctors />} />
 
         {/* Patient Route */}
           <Route path="viewpatient" element={<ViewPatient/>}/>
         
 
         {/* Login Route */}
-        <Route page="/login" element={<LoginPage/>}/>
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
 
 

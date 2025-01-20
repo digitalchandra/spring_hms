@@ -1,7 +1,7 @@
-// Student Name: Shrstha Chandra Bahadur
+// Student Name: Shrstha
 // student ID m24w0199
 // ------------------------
-// Student Name: Anju Pandey
+// Student Name: Pandey
 // Student Id: m240213
 
 package com.HMS.HospitalManagement.entity;
