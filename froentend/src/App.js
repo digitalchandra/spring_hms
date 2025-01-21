@@ -16,6 +16,7 @@ import AddAppointment from "./dashboard/pages/appoinment/AddAppoinment";
 import UpdatePatient from "./dashboard/pages/patient/UpdatePatient";
 import ViewDoctors from "./dashboard/pages/doctors/ViewDoctors";
 import AddDoctors from "./dashboard/pages/doctors/AddDoctors";
+import AddPatient from "./dashboard/pages/patient/AddPatient";
 
 
 import ViewPatient from "./dashboard/pages/patient/ViewPatient";
@@ -45,6 +46,7 @@ function App() {
 
         {/* Patient Route */}
           <Route path="viewpatient" element={<ViewPatient/>}/>
+          <Route path="addpatient" element={<AddPatient/>}/>
         
 
         {/* Login Route */}

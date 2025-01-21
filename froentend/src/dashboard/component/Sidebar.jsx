@@ -43,7 +43,7 @@ const Sidebar = () => {
           {/* Patients Dropdown */}
           {patientsOpen && (
             <ul className="ml-4">
-              <li><Link to="/patients/add" className="text-lg hover:text-gray-300">Add Patient</Link></li>
+              <li><Link to="/addpatient" className="text-lg hover:text-gray-300">Add Patient</Link></li>
               <li><Link to="/patients/view" className="text-lg hover:text-gray-300">View Patient</Link></li>
               <li><Link to="/patients/update" className="text-lg hover:text-gray-300">Update Patient</Link></li>
             </ul>
